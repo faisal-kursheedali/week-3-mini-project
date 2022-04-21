@@ -13,9 +13,7 @@ const QuestionBox = () => {
     console.log(location);
     const {item,name}=location.state
     console.log(item[count].question);
-    let question = item[count].question;
-    let option = item[count].option;
-    let crt = item[count].crt;
+    
     return (
         <>
             <div className="ques-container">
@@ -39,7 +37,7 @@ const QuestionBox = () => {
                                         <li key={index}>
                                             <input type="radio" name="option" className='question-list-item' value={i} id="" disabled={check}   onChange={(i) => {
                                                 console.log(i.target.value)
-                                                console.log(crt);
+                                                
                                                 setCheck(true)
                                                 i.target.style.pointerEvent="none";
                                                 if (i.target.value===item[count].crt) {

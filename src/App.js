@@ -4,15 +4,13 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-// import {
-//   BrowserRouter
-// } from "react-router-dom";
+
 import {Home,Question} from "./pages/import"
 import {Nav} from "./component/import"
 import QuestionBox from "./component/question";
 import Name from './pages/name';
 import Topper from './pages/topper';
-// import { withRouter } from "react-router-dom";
+
 function App() {
   return (
   

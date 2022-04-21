@@ -1,5 +1,4 @@
 import React from 'react'
-import QuestionBox from "../component/question"
 import data from "../component/data"
 import { Link } from 'react-router-dom'
 import "./css/question.css"

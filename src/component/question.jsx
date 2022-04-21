@@ -83,7 +83,7 @@ const QuestionBox = () => {
                                     
                                         if(count+1<item.length){
             
-                                            return setCount(count+1),setCheck(false)
+                                            return (setCount(count+1),setCheck(false))
                                             
                                             
                                         }

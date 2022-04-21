@@ -1,0 +1,31 @@
+.question-bank-display{
+    width: 100%;
+}
+.q-card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.q-card-sm{
+    width: 50%;
+    max-width: 250px;
+    padding: 1rem;
+    aspect-ratio: 1/1;
+    border: 2px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:center ;
+    margin-top: 1rem;
+}
+.q-card-sm-img{
+    width: 100%;
+    object-fit: contain;
+}
+.card-sm-txt{
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    width: 160px; 
+    height: 1.2em; 
+    white-space: nowrap;
+}

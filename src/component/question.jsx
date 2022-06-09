@@ -9,6 +9,7 @@ const QuestionBox = () => {
     const [score, setScore] = useState(0);
     const [count, setCount] = useState(0);
     const [check, setCheck] = useState(false);
+    const [checkIndex, setCheckIndex] = useState();
     const location=useLocation()
     console.log(location);
     const {item,name}=location.state
@@ -35,9 +36,11 @@ const QuestionBox = () => {
                                 item[count].option.map((i, index) => {
                                     return (
                                         <li key={index}>
-                                            <input type="radio" name="option" className='question-list-item' value={i} id="" disabled={check}   onChange={(i) => {
+                                            <label htmlFor={`optionOf${index}`} className='quiz-option-lable'>
+                                            <input type="radio" name="option" className='question-list-item' value={i} id={`optionOf${index}`} disabled={check}    onChange={(i) => {
                                                 console.log(i.target.value)
-                                                
+                                                i.target.checked=true;
+                                                setCheckIndex(index)
                                                 setCheck(true)
                                                 i.target.style.pointerEvent="none";
                                                 if (i.target.value===item[count].crt) {
@@ -46,7 +49,7 @@ const QuestionBox = () => {
                                                     }
                                                     
                                                 }
-                                            }} />{i}
+                                            }} />{i}</label>
                                         </li>
                                     )
                                 })
@@ -80,7 +83,7 @@ const QuestionBox = () => {
                                 }} className="link-nostyle"><button className="btn quiz-nxt-btn">result</button></Link>):(<button className="btn quiz-nxt-btn" onClick={()=>{
                                     console.log(count)
                                     console.log(item.length)
-                                    
+                                        document.querySelector(`#optionOf${checkIndex}`).checked=false; 
                                         if(count+1<item.length){
             
                                             return (setCount(count+1),setCheck(false))

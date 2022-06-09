@@ -1,10 +1,10 @@
  const data = [
     {
         image:"https://thinkdeep.netlify.app/img/india.jpg",
-        name:"Must attend",
+        name:"India",
         desc:"Quiz about Country India",
         type:"Must attend",
-        points:100,
+        points:5,
         data:[
             {
                 question: "What Indian city is the capital of two states?",
@@ -35,16 +35,26 @@
     },   
     {
         image:"https://thinkdeep.netlify.app/img/africa.jpg",
-        name:"",
-        desc:"",
-        type:"",
-        points:100,
+        name:"Africa",
+        desc:"Quiz about Country Africa",
+        type:"For Bonus",
+        points:3,
         data:[
             {
-                question: "hello",
-                option: ["hii", "hello", "bye"],
-                crt: "hello"
-            }
+                question: "Which country is the chief home of the Shona people?",
+                option: ["Tanzania", "Namibia", "Kenya","Zimbabwe"],
+                crt: "Zimbabwe"
+            },
+            {
+                question: "Serengeti National Park is in which country?",
+                option: ["Kenya", "Niger", "Tanzania","Mali"],
+                crt: "Tanzania"
+            },
+            {
+                question: "Which country was formerly called Rhodesia?",
+                option: ["Algeria", "Ethiopia", "Somalia","Zimbabwe"],
+                crt: "Zimbabwe"
+            },
         ]
     },   
       
